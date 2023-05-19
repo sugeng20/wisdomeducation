@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [FrontendController::class, 'home']);
-Route::get('/about', [FrontendController::class, 'about']);
+Route::get('/', [UserController::class, 'home']);
+Route::get('/about', [UserController::class, 'about']);
 Route::get('/login', [AuthController::class, 'login']);

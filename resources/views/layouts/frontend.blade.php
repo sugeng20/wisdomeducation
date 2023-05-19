@@ -30,22 +30,22 @@
         rel="stylesheet">
 
     <!--Bootstrap css-->
-    <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!--Magnific popup css-->
-    <link rel="stylesheet" href="{{ asset('frontend/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
     <!--Themify icon css-->
-    <link rel="stylesheet" href="{{ asset('frontend/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/themify-icons.css') }}">
     <!--animated css-->
-    <link rel="stylesheet" href="{{ asset('frontend/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
     <!--ytplayer css-->
-    <link rel="stylesheet" href="{{ asset('frontend/css/jquery.mb.YTPlayer.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery.mb.YTPlayer.min.css') }}">
     <!--Owl carousel css-->
-    <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
     <!--custom css-->
-    <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!--responsive css-->
-    <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <style>
         a.active {
             color: yellow !important;
@@ -61,8 +61,8 @@
         <!--start navbar-->
         <nav class="navbar navbar-expand-lg fixed-top custom-nav white-bg">
             <div class="container">
-                <a class="navbar-brand" href="index-3.html"><img src="{{ asset('frontend/img/logo.png') }}" width="80"
-                        alt="logo" class="img-fluid"></a>
+                <a class="navbar-brand" href="index-3.html"><img src="{{ asset('img/logo.png') }}" width="80" alt="logo"
+                        class="img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -113,7 +113,7 @@
 
     <!--shape image start-->
     <div class="shape-img subscribe-wrap">
-        <img src="{{ asset('frontend/img/footer-top-shape.png') }}" alt="footer shape" class="img-fluid">
+        <img src="{{ asset('img/footer-top-shape.png') }}" alt="footer shape" class="img-fluid">
 
     </div>
     <!--shape image end-->
@@ -123,13 +123,12 @@
 
         <!--footer top start-->
         <div class="footer-top pt-150 pb-5 background-img-2"
-            style="background: url('{{ asset('frontend/img/footer-bg.png') }}')no-repeat center top / cover">
+            style="background: url('{{ asset('img/footer-bg.png') }}')no-repeat center top / cover">
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-lg-3 mb-3 mb-lg-0">
                         <div class="footer-nav-wrap text-white">
-                            <img src="{{ asset('frontend/img/logo.png') }}" alt="footer logo" width="120"
-                                class="img-fluid mb-3">
+                            <img src="{{ asset('img/logo.png') }}" alt="footer logo" width="120" class="img-fluid mb-3">
                             <p>Wisdom Education</p>
 
                             <div class="social-list-wrap">
@@ -198,27 +197,27 @@
     <!--footer section end-->
 
     <!--jQuery-->
-    <script src="{{ asset('frontend/js/jquery-3.5.0.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-3.5.0.min.js') }}"></script>
     <!--Popper js-->
-    <script src="{{ asset('frontend/js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
     <!--Bootstrap js-->
-    <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <!--Magnific popup js-->
-    <script src="{{ asset('frontend/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
     <!--jquery easing js-->
-    <script src="{{ asset('frontend/js/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
     <!--jquery ytplayer js-->
-    <script src="{{ asset('frontend/js/jquery.mb.YTPlayer.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.mb.YTPlayer.min.js') }}"></script>
     <!--wow js-->
-    <script src="{{ asset('frontend/js/wow.min.js') }}"></script>
+    <script src="{{ asset('js/wow.min.js') }}"></script>
     <!--owl carousel js-->
-    <script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <!--countdown js-->
-    <script src="{{ asset('frontend/js/jquery.countdown.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.countdown.min.js') }}"></script>
     <!--validator js-->
-    <script src="{{ asset('frontend/js/validator.min.js') }}"></script>
+    <script src="{{ asset('js/validator.min.js') }}"></script>
     <!--custom js-->
-    <script src="{{ asset('frontend/js/scripts.js') }}"></script>
+    <script src="{{ asset('js/scripts.js') }}"></script>
 </body>
 
 </html>

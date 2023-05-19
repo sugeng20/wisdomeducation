@@ -71,7 +71,7 @@ Login
         </div>
     </div>
     <div class="bottom-img-absolute">
-        <img src="{{ asset('frontend/img/hero-bg-shape-1.svg') }}" alt="wave shape" class="img-fluid">
+        <img src="{{ asset('img/hero-bg-shape-1.svg') }}" alt="wave shape" class="img-fluid">
     </div>
 </section>
 <!--hero section end-->
