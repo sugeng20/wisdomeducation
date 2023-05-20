@@ -64,7 +64,7 @@ Login
                         </form>
                     </div>
                     <div class="card-footer bg-transparent border-top px-md-5"><small>Not registered?</small>
-                        <a href="sign-up.html" class="small"> Create account</a>
+                        <a href="{{ url('register') }}" class="small"> Create account</a>
                     </div>
                 </div>
             </div>

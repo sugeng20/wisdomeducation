@@ -94,7 +94,8 @@
                                 href="{{ url('/login') }}">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-scroll" href="{{ url('/register') }}">Daftar</a>
+                            <a class="nav-link page-scroll {{ Request::segment(1) == 'register' ? 'active' : '' }}"
+                                href="{{ url('/register') }}">Register</a>
                         </li>
 
                     </ul>
