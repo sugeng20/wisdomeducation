@@ -8,7 +8,7 @@ Register
 <!--hero section start-->
 <section class="hero-section ptb-100 background-img full-screen">
     <div class="container">
-        <div class="row align-items-center justify-content-between pt-5 pt-sm-5 pt-md-5 pt-lg-0">
+        <div class="row justify-content-between pt-5 pt-sm-5 pt-md-5 pt-lg-0">
             <div class="col-md-6 col-lg-6">
                 <div class="hero-content-left text-white">
                     <h1 class="text-white">Create Your Account</h1>
@@ -24,7 +24,20 @@ Register
                             <h6 class="h3">Create account Teacher</h6>
                             <p class="text-muted mb-0">Made with love by developers for developers.</p>
                         </div>
-                        <form class="login-signup-form" method="POST" action="">
+                        @if ($errors->any())
+                        <div class="row my-3">
+                            <div class="col-sm-12">
+                                <div class="alert alert-danger dark" role="alert">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+                        <form class="login-signup-form" method="POST" action="{{ url("/register") }}">
                             @csrf
                             <div class="form-group">
                                 <!-- Label -->
@@ -88,6 +101,21 @@ Register
                             <div class="form-group">
                                 <!-- Label -->
                                 <label class="pb-1">
+                                    No HP
+                                </label>
+                                <!-- Input group -->
+                                <div class="input-group input-group-merge">
+                                    <div class="input-icon">
+                                        <span class="ti-user color-primary"></span>
+                                    </div>
+                                    <input type="text" name="no_hp" class="form-control"
+                                        placeholder="Masukan No HP anda" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <!-- Label -->
+                                <label class="pb-1">
                                     Tanggal Lahir
                                 </label>
                                 <!-- Input group -->
@@ -103,6 +131,25 @@ Register
                             <div class="form-group">
                                 <!-- Label -->
                                 <label class="pb-1">
+                                    Jabatan
+                                </label>
+                                <!-- Input group -->
+                                <div class="input-group input-group-merge">
+                                    <div class="input-icon">
+                                        <span class="ti-user color-primary"></span>
+                                    </div>
+                                    <select name="jabatan_id" class="form-control" id="jabatan" required>
+                                        <option value="">- Pilih Jabatan -</option>
+                                        @foreach ($data['jabatan'] as $jabatan)
+                                        <option value="{{ $jabatan->id }}">{{ $jabatan->nama_jabatan }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <!-- Label -->
+                                <label class="pb-1">
                                     Asal Sekolah
                                 </label>
                                 <!-- Input group -->
@@ -110,8 +157,11 @@ Register
                                     <div class="input-icon">
                                         <span class="ti-user color-primary"></span>
                                     </div>
-                                    <select name="asal_sekolah" class="form-control" id="asal_sekolah" required>
+                                    <select name="sekolah_id" class="form-control" id="asal_sekolah" required>
                                         <option value="">- Pilih Sekolah -</option>
+                                        @foreach ($data['sekolah'] as $sekolah)
+                                        <option value="{{ $sekolah->id }}">{{ $sekolah->nama_sekolah }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -132,7 +182,7 @@ Register
 
                     </div>
                     <div class="card-footer px-md-5 bg-transparent border-top"><small>Already have an account?</small>
-                        <a href="{{ url('login') }}" class="small">Sign in</a>
+                        <a href="{{ url('sign-in') }}" class="small">Sign in</a>
                     </div>
                 </div>
             </div>

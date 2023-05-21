@@ -24,7 +24,16 @@ Login
                             <h5 class="h3">Login</h5>
                             <p class="text-muted mb-0">Sign in to your account to continue.</p>
                         </div>
-
+                        @if (Session::get('success'))
+                        <div class="my-3 alert alert-primary alert-dismissible fade show border-0 b-round" role="alert">
+                            <strong>{{ Session::get('success') }}</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endif
+                        @error('username')
+                        <div class="alert alert-danger text-center mt-2">Username dan Password anda salah !
+                        </div>
+                        @enderror
                         <!--login form-->
                         <form class="login-signup-form">
                             <div class="form-group">
@@ -33,7 +42,7 @@ Login
                                     <div class="input-icon">
                                         <span class="ti-user color-primary"></span>
                                     </div>
-                                    <input type="user" class="form-control" placeholder="name@yourdomain.com">
+                                    <input type="user" class="form-control" placeholder="Masukan Username">
                                 </div>
                             </div>
                             <!-- Password -->
@@ -43,16 +52,14 @@ Login
                                         <label class="pb-1">Password</label>
                                     </div>
                                     <div class="col-auto">
-                                        <a href="password-reset.html" class="form-text small text-muted">
-                                            Forgot password?
-                                        </a>
+
                                     </div>
                                 </div>
                                 <div class="input-group input-group-merge">
                                     <div class="input-icon">
                                         <span class="ti-lock color-primary"></span>
                                     </div>
-                                    <input type="password" class="form-control" placeholder="Enter your password">
+                                    <input type="password" class="form-control" placeholder="Masukan Passwod Kamu">
                                 </div>
                             </div>
 
@@ -64,7 +71,7 @@ Login
                         </form>
                     </div>
                     <div class="card-footer bg-transparent border-top px-md-5"><small>Not registered?</small>
-                        <a href="{{ url('register') }}" class="small"> Create account</a>
+                        <a href="{{ url('sign-up') }}" class="small"> Create account</a>
                     </div>
                 </div>
             </div>

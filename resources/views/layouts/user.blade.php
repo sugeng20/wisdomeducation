@@ -90,12 +90,12 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link page-scroll {{ Request::segment(1) == 'login' ? 'active' : '' }}"
-                                href="{{ url('/login') }}">Login</a>
+                            <a class="nav-link page-scroll {{ Request::segment(1) == 'sign-in' ? 'active' : '' }}"
+                                href="{{ url('/sign-in') }}">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-scroll {{ Request::segment(1) == 'register' ? 'active' : '' }}"
-                                href="{{ url('/register') }}">Register</a>
+                            <a class="nav-link page-scroll {{ Request::segment(1) == 'sign-up' ? 'active' : '' }}"
+                                href="{{ url('/sign-up') }}">Register</a>
                         </li>
 
                     </ul>
