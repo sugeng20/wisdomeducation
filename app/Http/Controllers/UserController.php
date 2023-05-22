@@ -15,4 +15,15 @@ class UserController extends Controller
     {
         return view('pages.user.about');
     }
+
+    public function faq()
+    {
+        return view('pages.user.faq');
+    }
+
+    public function contact()
+    {
+        return view('pages.user.contact');
+    }
+
 }

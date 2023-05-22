@@ -85,8 +85,8 @@
                                 href="{{ url('/contact') }}">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-scroll {{ Request::segment(1) == 'fax' ? 'active' : '' }}"
-                                href="{{ url('/fax') }}">FAX</a>
+                            <a class="nav-link page-scroll {{ Request::segment(1) == 'faq' ? 'active' : '' }}"
+                                href="{{ url('/faq') }}">FAQ</a>
                         </li>
 
                         <li class="nav-item">
