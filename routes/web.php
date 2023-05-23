@@ -20,5 +20,6 @@ Route::get('/about', [UserController::class, 'about']);
 Route::get('/faq', [UserController::class, 'faq']);
 Route::get('/contact', [UserController::class, 'contact']);
 Route::get('/sign-in', [AuthController::class, 'signIn']);
+Route::post('/login', [AuthController::class, 'login']);
 Route::get('/sign-up', [AuthController::class, 'signUp']);
 Route::post('/register', [AuthController::class, 'register']);

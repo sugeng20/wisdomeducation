@@ -35,14 +35,16 @@ Login
                         </div>
                         @enderror
                         <!--login form-->
-                        <form class="login-signup-form">
+                        <form class="login-signup-form" method="POST" action="{{ url('/login') }}">
+                            @csrf
                             <div class="form-group">
                                 <label class="pb-1">Username</label>
                                 <div class="input-group input-group-merge">
                                     <div class="input-icon">
                                         <span class="ti-user color-primary"></span>
                                     </div>
-                                    <input type="user" class="form-control" placeholder="Masukan Username">
+                                    <input type="user" name="username" class="form-control"
+                                        placeholder="Masukan Username">
                                 </div>
                             </div>
                             <!-- Password -->
@@ -59,7 +61,8 @@ Login
                                     <div class="input-icon">
                                         <span class="ti-lock color-primary"></span>
                                     </div>
-                                    <input type="password" class="form-control" placeholder="Masukan Passwod Kamu">
+                                    <input type="password" name="password" class="form-control"
+                                        placeholder="Masukan Passwod Kamu">
                                 </div>
                             </div>
 

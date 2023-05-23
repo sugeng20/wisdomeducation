@@ -7,6 +7,7 @@ use App\Models\Jabatan;
 use App\Models\Sekolah;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
@@ -14,6 +15,32 @@ class AuthController extends Controller
     public function SignIn()
     {
         return view('pages.auth.sign-in');
+    }
+
+    public function login(Request $request)
+    {
+        $request->validate([
+            'username' => 'required',
+            'password' => 'required'
+        ]);
+
+        $credentials = $request->only('username', 'password');
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            if(Auth::user()->role == 'ADMIN') {
+                return redirect()->intended('/admin');
+            } else if(Auth::user()->role == 'GURU')  {
+                return redirect()->intended('/guru');
+            } else if(Auth::user()->role == 'SISWA')  {
+                return redirect()->intended('/siswa');
+            }
+        }
+
+        return back()->withErrors([
+            'username' => 'Username dan Password tidak cocok!',
+        ]);
     }
 
     public function SignUp()
