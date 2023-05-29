@@ -73,7 +73,7 @@
                     <ul class="navbar-nav ml-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link page-scroll {{ Request::segment(1) == 'guru' ? 'active' : '' }}"
+                            <a class="nav-link page-scroll {{ Request::segment(2) == '' ? 'active' : '' }}"
                                 href="{{ url('/guru') }}">Home</a>
                         </li>
                         <li class="nav-item">
@@ -81,8 +81,8 @@
                                 href="{{ url('/student') }}">Student</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-scroll {{ Request::segment(1) == 'class' ? 'active' : '' }}"
-                                href="{{ url('/class') }}">Class</a>
+                            <a class="nav-link page-scroll {{ Request::segment(2) == 'class-teacher' ? 'active' : '' }}"
+                                href="{{ route('class-teacher.index') }}">Class</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(1) == 'certificate' ? 'active' : '' }}"
