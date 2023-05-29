@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Guru\HomeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,7 @@ Route::get('/sign-in', [AuthController::class, 'signIn']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/sign-up', [AuthController::class, 'signUp']);
 Route::post('/register', [AuthController::class, 'register']);
+
+Route::middleware(['auth'])->prefix('guru')->group(function() {
+    Route::get('/', [HomeController::class, 'index']);
+});
