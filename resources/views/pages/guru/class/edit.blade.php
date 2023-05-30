@@ -1,7 +1,7 @@
 @extends('layouts.guru')
 
 @section('title')
-Class
+Edit Class
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@ Class
         <div class="row align-items-center justify-content-center">
             <div class="col-md-9 col-lg-7">
                 <div class="page-header-content text-white text-center pt-sm-5 pt-md-5 pt-lg-0">
-                    <h1 class="text-white mb-0">Class</h1>
+                    <h1 class="text-white mb-0">Edit Class</h1>
                     <div class="custom-breadcrumb">
                         <ol class="breadcrumb d-inline-block bg-transparent list-inline py-0">
                             <li class="list-inline-item breadcrumb-item">Pages</li>
@@ -31,7 +31,7 @@ Class
     <section id="about" class="about-us ptb-100">
         <div class="container">
             <div class="row">
-                <h2>Tambah Kelas</h2>
+                <h2>Edit Kelas</h2>
             </div>
             @if ($errors->any())
             <div class="row my-3">
@@ -62,7 +62,8 @@ Class
                         <select name="matpel_id" id="matpel_id" class="form-control">
                             <option value="">- Pilih Mata Pelajaran -</option>
                             @foreach ($data['mata_pelajaran'] as $matpel)
-                            <option value="{{ $matpel->id }}">{{ $matpel->nama_matpel }}</option>
+                            <option value="{{ $matpel->id }}" {{ $kelas->matpel_id == $matpel->id }}>{{
+                                $matpel->nama_matpel }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -97,6 +98,8 @@ Class
 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+
+
         </div>
     </section>
     <!--about us section end-->
