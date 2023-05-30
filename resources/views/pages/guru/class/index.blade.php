@@ -49,7 +49,6 @@ Class
             @if (Session::get('success'))
             <div class="my-3 alert alert-primary alert-dismissible fade show border-0 b-round" role="alert">
                 <strong>{{ Session::get('success') }}</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             @endif
             <form action="{{ route('class-teacher.store') }}" method="POST" enctype="multipart/form-data">
@@ -117,8 +116,12 @@ Class
                                 <a href="{{ route('class-teacher.edit', $kelas->id) }}"
                                     class="btn btn-primary text-white">Edit</a>
 
-                                <a href="{{ route('class-teacher.edit', $kelas->id) }}"
-                                    class="btn btn-danger text-white">Hapus</a>
+                                <form action="{{ route('class-teacher.destroy', $kelas->id) }}" method="POST"
+                                    onsubmit="return confirm(`Apakah anda yakin akan menghapus ini?`)">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit" class="btn btn-danger">Hapus</button>
+                                </form>
                             </div>
                         </div>
                     </div>

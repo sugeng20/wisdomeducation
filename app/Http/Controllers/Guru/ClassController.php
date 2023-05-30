@@ -7,6 +7,7 @@ use App\Models\Kelas;
 use App\Models\MataPelajaran;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ClassController extends Controller
 {
@@ -95,7 +96,25 @@ class ClassController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'matpel_id' => 'required',
+            'nama_kelas' => 'required|max:255',
+            'deskripsi' => 'required|max:255',
+        ]);
+
+        $kelas = Kelas::findOrFail($id);
+
+        $kelas->guru_id = Auth::user()->id;
+        $kelas->matpel_id = $request->input('matpel_id');
+        $kelas->nama_kelas =  $request->input('nama_kelas');
+        $kelas->deskripsi =  $request->input('deskripsi');
+        if($request->hasFile('gambar')) {
+            Storage::delete($kelas->gambar);
+            $kelas->gambar = $request->file('gambar')->store('gambar');
+        }
+        $kelas->save();
+
+        return redirect()->route('class-teacher.edit', $id)->with('success', 'Berhasil Mengubah Kelas');
     }
 
     /**
@@ -106,6 +125,9 @@ class ClassController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $kelas = Kelas::findOrFail($id);
+        Storage::delete($kelas->gambar);
+        $kelas->delete();
+        return redirect()->route('class-teacher.index')->with('success', 'Berhasil Menhapus Kelas');
     }
 }

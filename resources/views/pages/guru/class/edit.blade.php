@@ -49,11 +49,11 @@ Edit Class
             @if (Session::get('success'))
             <div class="my-3 alert alert-primary alert-dismissible fade show border-0 b-round" role="alert">
                 <strong>{{ Session::get('success') }}</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             @endif
-            <form action="{{ route('class-teacher.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('class-teacher.update', $kelas->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                @method('put')
                 <div class="row align-items-center mb-3">
                     <div class="col-lg-2">
                         <label for="matpel_id">Mata Pelajaran</label>
@@ -62,7 +62,8 @@ Edit Class
                         <select name="matpel_id" id="matpel_id" class="form-control">
                             <option value="">- Pilih Mata Pelajaran -</option>
                             @foreach ($data['mata_pelajaran'] as $matpel)
-                            <option value="{{ $matpel->id }}" {{ $kelas->matpel_id == $matpel->id }}>{{
+                            <option value="{{ $matpel->id }}" {{ $kelas->matpel_id == $matpel->id ? 'selected' : ''
+                                }}>{{
                                 $matpel->nama_matpel }}</option>
                             @endforeach
                         </select>
@@ -74,7 +75,8 @@ Edit Class
                         <label for="nama_kelas">Nama Kelas</label>
                     </div>
                     <div class="col-lg-4">
-                        <input type="text" name="nama_kelas" id="nama_kelas" class="form-control">
+                        <input type="text" name="nama_kelas" id="nama_kelas" class="form-control"
+                            value="{{ $kelas->nama_kelas }}">
                     </div>
                 </div>
 
@@ -84,6 +86,8 @@ Edit Class
                     </div>
                     <div class="col-lg-4">
                         <input type="file" name="gambar" id="gambar" class="form-control">
+                        <a href="{{ Storage::url($kelas->gambar) }}" target="_blank" class="btn btn-primary mt-1">Lihat
+                            Gambar</a>
                     </div>
                 </div>
 
@@ -92,7 +96,8 @@ Edit Class
                         <label for="deskripsi">Deskripsi Singkat</label>
                     </div>
                     <div class="col-lg-4">
-                        <input type="text" name="deskripsi" id="deskripsi" class="form-control">
+                        <input type="text" name="deskripsi" id="deskripsi" value="{{ $kelas->deskripsi }}"
+                            class="form-control">
                     </div>
                 </div>
 
