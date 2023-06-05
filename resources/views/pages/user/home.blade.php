@@ -27,8 +27,8 @@ Home
                         culpa porro rerum cumque aliquid consequatur amet!
                     </p>
 
-                    <a href="#" class="btn solid-btn">Daftar Sekarang</a>
-                    <a href="#" class="btn outline-btn">Masuk</a>
+                    <a href="{{ url("sign-up") }}" class="btn solid-btn">Daftar Sekarang</a>
+                    <a href="{{ url("sign-in") }}" class="btn outline-btn">Masuk</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-5">

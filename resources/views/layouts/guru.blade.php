@@ -90,7 +90,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(1) == 'kreasi' ? 'active' : '' }}"
-                                href="{{ url('/kreasi') }}">Kreasi</a>
+                                href="{{ route('kreasi.index') }}">Kreasi</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(1) == 'logout' ? 'active' : '' }}"
