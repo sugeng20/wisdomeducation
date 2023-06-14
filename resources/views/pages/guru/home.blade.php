@@ -34,44 +34,23 @@ Halaman Guru
                 <h2>Class</h2>
             </div>
             <div class="row">
+                @foreach ($data['kelas'] as $kelas)
                 <div class="col-md-4">
-                    <div class="single-blog-card card border-0 shadow-sm white-bg">
-                        <span class="category position-absolute badge badge-pill badge-primary">Kelas IV</span>
-                        <img src="{{ asset('img/kelas-jelajah/image-1.jpg') }}" class="card-img-top position-relative"
-                            alt="blog">
-                        <div class="card-body">
-                            <h3 class="h5 card-title"><a href="#">Appropriately productize fully</a></h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk.</p>
+                    <a href="{{ route('class-teacher.show', $kelas->id) }}">
+                        <div class="single-blog-card card border-0 shadow-sm white-bg">
+                            <span class="category position-absolute badge badge-pill badge-primary">{{
+                                $kelas->mataPelajaran->nama_matpel
+                                }}</span>
+                            <img src="{{ Storage::url($kelas->gambar) }}" class="card-img-top position-relative"
+                                alt="blog">
+                            <div class="card-body">
+                                <h3 class="h5 card-title"><a href="#">{{ $kelas->nama_kelas }}</a></h3>
+                                <p class="card-text">{{ $kelas->deskripsi }}</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="single-blog-card card border-0 shadow-sm white-bg">
-                        <span class="category position-absolute badge badge-pill badge-primary">Kelas IV</span>
-                        <img src="{{ asset('img/kelas-jelajah/image-2.jpg') }}" class="card-img-top position-relative"
-                            alt="blog">
-                        <div class="card-body">
-                            <h3 class="h5 card-title"><a href="#">Appropriately productize fully</a></h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="single-blog-card card border-0 shadow-sm white-bg">
-                        <span class="category position-absolute badge badge-pill badge-primary">Kelas IV</span>
-                        <img src="{{ asset('img/kelas-jelajah/image-3.jpg') }}" class="card-img-top position-relative"
-                            alt="blog">
-                        <div class="card-body">
-                            <h3 class="h5 card-title"><a href="#">Appropriately productize fully</a></h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
 
                 <div class="col-12">
                     <a href="#" class="btn btn-primary">Lihat Selanjutnya</a>

@@ -19,7 +19,7 @@ class ClassController extends Controller
     public function index()
     {
         $data['mata_pelajaran'] = MataPelajaran::all();
-        $data['kelas'] = Kelas::where('guru_id', Auth::user()->id)->get();
+        $data['kelas'] = Kelas::all();
         return view('pages.guru.class.index', compact('data'));
     }
 
@@ -71,7 +71,8 @@ class ClassController extends Controller
      */
     public function show($id)
     {
-        //
+        $kelas = Kelas::findOrFail($id);
+        return view('pages.guru.class.show', compact('kelas'));
     }
 
     /**

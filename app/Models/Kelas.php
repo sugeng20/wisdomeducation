@@ -12,4 +12,9 @@ class Kelas extends Model
     protected $table = 'kelas';
 
     protected $guarded = [];
+
+    public function mataPelajaran()
+    {
+        return $this->belongsTo(MataPelajaran::class, 'matpel_id');
+    }
 }
