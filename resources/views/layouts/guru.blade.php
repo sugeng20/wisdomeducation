@@ -11,19 +11,21 @@
     <meta name="author" content="ThemeTags">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site_name" content=Wisdom Education"" /> <!-- website name -->
     <meta property="og:site" content="" /> <!-- website link -->
-    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
-    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:title" content="Wisdom Education" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description"
+        content="Website WE hadir sebagai inovasi website sumber belajar dengan memadukan teknologi virtual reality dan augmented reality serta mengedepankan metode problem based learning" />
+    <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="{{ asset('img/logo.png') }}" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="{{ url('/') }}" /> <!-- where do you want your post to link to -->
     <meta property="og:type" content="article" />
 
     <!--title-->
     <title>Wisdom Education - @yield('title')</title>
 
     <!--favicon icon-->
-    <link rel="icon" href="#" type="image/png" sizes="16x16">
+    <link rel="icon" href="{{ asset('img/logo.png') }}" type="image/png" sizes="16x16">
 
     <!--google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7COpen+Sans&display=swap"
@@ -51,6 +53,10 @@
             color: yellow !important;
             font-weight: bold !important;
         }
+
+        .background-img:before {
+            background-image: linear-gradient(to right, #2F86A6, #34BE82) !important;
+        }
     </style>
 </head>
 
@@ -61,8 +67,8 @@
         <!--start navbar-->
         <nav class="navbar navbar-expand-lg fixed-top custom-nav white-bg">
             <div class="container">
-                <a class="navbar-brand" href="index-3.html"><img src="{{ asset('img/logo.png') }}" width="80" alt="logo"
-                        class="img-fluid"></a>
+                <a class="navbar-brand" href="{{ url('guru') }}"><img src="{{ asset('img/logo.png') }}" width="80"
+                        alt="logo" class="img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -74,27 +80,33 @@
 
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(2) == '' ? 'active' : '' }}"
-                                href="{{ url('/guru') }}">Home</a>
+                                href="{{ url('/guru') }}">
+                                <i class="ti-home text-bold text-black"></i>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(1) == 'student' ? 'active' : '' }}"
-                                href="{{ url('/student') }}">Student</a>
+                                href="{{ url('/student') }}">Siswa</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(2) == 'class-teacher' ? 'active' : '' }}"
-                                href="{{ route('class-teacher.index') }}">Class</a>
+                                href="{{ route('class-teacher.index') }}">Kelas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(1) == 'certificate' ? 'active' : '' }}"
-                                href="{{ url('/certificate') }}">Certificate</a>
+                                href="{{ url('/certificate') }}">Sertifikat</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-scroll {{ Request::segment(1) == 'kreasi' ? 'active' : '' }}"
-                                href="{{ route('kreasi.index') }}">Kreasi</a>
+                            <a class="nav-link page-scroll {{ Request::segment(2) == 'kreasi' ? 'active' : '' }}"
+                                href="{{ route('kreasi.index') }}">Wadah Kreasi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll {{ Request::segment(2) == 'unduhan' ? 'active' : '' }}"
+                                href="{{ url('/guru/unduhan') }}">Unduhan</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(1) == 'logout' ? 'active' : '' }}"
-                                href="{{ url('/logout') }}">Logout</a>
+                                href="{{ url('/logout') }}">Keluar</a>
                         </li>
                     </ul>
                 </div>

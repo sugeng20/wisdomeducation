@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kelas;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
     public function home()
     {
-        return view('pages.user.home');
+        $data['kelas'] = Kelas::all();
+        return view('pages.user.home', compact('data'));
     }
 
     public function about()

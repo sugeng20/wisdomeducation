@@ -30,7 +30,26 @@ Kreasi
     <!--about us section start-->
     <section id="about" class="about-us ptb-100">
         <div class="container">
-            <div class="row">
+            <p>
+                Fitur Wadah Kreasi bertujuan untuk meningkatkan kreativitas guru dalam mengkreasikan pembalajaran yang
+                inovatif melalui
+                media pembelajaran dengan menggunakan template yang telah tersedia dan referensi storyboard pengembangan
+                media
+                pembelajaran yang dapat diakses oleh guru. Untuk detail pemanfaatan storyboard kreasi silahkan unduh
+                Panduan Pemanfaatan
+                Stroyboard KReasi pada laman unduhan.
+            </p>
+
+            <h3>CONTOH STORYBOARD MEDIA PEMBELAJARAN</h3>
+            <a href="https://drive.google.com/file/d/1Lz3CTy1CPrXHKdcePjCx6Bkz6wOVnHS3/view"
+                class="btn btn-primary btn-block">Lihat Contoh Storyboard Media Pembelajaran</a>
+            <hr>
+            <h3 class="mt-5">TEMPLATE KOSONG STORY BOARD:</h3>
+            <a href="https://drive.google.com/file/d/1RrFBP695bv6ygQ58wWGMz23gyoieysf9/view"
+                class="btn btn-primary btn-block">Lihat
+                Contoh Storyboard Media Pembelajaran</a>
+            <hr>
+            <div class="row mt-5">
                 <h2>Tambah Kreasi</h2>
             </div>
             @if ($errors->any())

@@ -31,7 +31,7 @@ Halaman Guru
     <section id="about" class="about-us ptb-100">
         <div class="container">
             <div class="row align-items-center justify-content-between">
-                <h2>Class</h2>
+                <h2>Kelas</h2>
             </div>
             <div class="row">
                 @foreach ($data['kelas'] as $kelas)
@@ -52,14 +52,12 @@ Halaman Guru
                 </div>
                 @endforeach
 
-                <div class="col-12">
-                    <a href="#" class="btn btn-primary">Lihat Selanjutnya</a>
-                </div>
+
 
             </div>
 
             <div class="row align-items-center justify-content-between mt-5">
-                <h2>Student</h2>
+                <h2>Siswa</h2>
             </div>
             <div class="row">
                 <div class="col-md-4">
@@ -101,14 +99,12 @@ Halaman Guru
                     </div>
                 </div>
 
-                <div class="col-12">
-                    <a href="#" class="btn btn-primary">Lihat Selanjutnya</a>
-                </div>
+
 
             </div>
 
             <div class="row align-items-center justify-content-between mt-5">
-                <h2>Certificate</h2>
+                <h2>Sertifikat</h2>
             </div>
             <div class="row">
                 <div class="col-md-4">
@@ -150,9 +146,7 @@ Halaman Guru
                     </div>
                 </div>
 
-                <div class="col-12">
-                    <a href="#" class="btn btn-primary">Lihat Selanjutnya</a>
-                </div>
+
 
             </div>
         </div>

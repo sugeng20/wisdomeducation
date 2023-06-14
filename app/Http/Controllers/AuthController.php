@@ -80,4 +80,10 @@ class AuthController extends Controller
 
         return redirect('/sign-in')->with('success', 'Berhasil Daftar Akun, Silahkan masuk menggunakan akun username dan password yang sudah didaftarkan');
     }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/');
+    }
 }

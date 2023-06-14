@@ -11,19 +11,21 @@
     <meta name="author" content="ThemeTags">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site_name" content=Wisdom Education"" /> <!-- website name -->
     <meta property="og:site" content="" /> <!-- website link -->
-    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
-    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:title" content="Wisdom Education" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description"
+        content="Website WE hadir sebagai inovasi website sumber belajar dengan memadukan teknologi virtual reality dan augmented reality serta mengedepankan metode problem based learning" />
+    <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="{{ asset('img/logo.png') }}" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="{{ url('/') }}" /> <!-- where do you want your post to link to -->
     <meta property="og:type" content="article" />
 
     <!--title-->
     <title>Wisdom Education - @yield('title')</title>
 
     <!--favicon icon-->
-    <link rel="icon" href="#" type="image/png" sizes="16x16">
+    <link rel="icon" href="{{ asset('img/logo.png') }}" type="image/png" sizes="16x16">
 
     <!--google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7COpen+Sans&display=swap"
@@ -51,6 +53,10 @@
             color: yellow !important;
             font-weight: bold !important;
         }
+
+        .background-img:before {
+            background-image: linear-gradient(to right, #2F86A6, #34BE82) !important;
+        }
     </style>
 </head>
 
@@ -61,8 +67,8 @@
         <!--start navbar-->
         <nav class="navbar navbar-expand-lg fixed-top custom-nav white-bg">
             <div class="container">
-                <a class="navbar-brand" href="index-3.html"><img src="{{ asset('img/logo.png') }}" width="80" alt="logo"
-                        class="img-fluid"></a>
+                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('img/logo.png') }}" width="80"
+                        alt="logo" class="img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -74,28 +80,29 @@
 
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(1) == '' ? 'active' : '' }}"
-                                href="{{ url('/') }}">Home</a>
+                                href="{{ url('/') }}">
+                                <i class="ti-home text-bold text-black"></i>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(1) == 'about' ? 'active' : '' }}"
-                                href="{{ url('/about') }}">About</a>
+                                href="{{ url('/about') }}">Tentang</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(1) == 'contact' ? 'active' : '' }}"
-                                href="{{ url('/contact') }}">Contact</a>
+                                href="{{ url('/contact') }}">Kontak</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(1) == 'faq' ? 'active' : '' }}"
                                 href="{{ url('/faq') }}">FAQ</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(1) == 'sign-in' ? 'active' : '' }}"
-                                href="{{ url('/sign-in') }}">Login</a>
+                                href="{{ url('/sign-in') }}">Masuk</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(1) == 'sign-up' ? 'active' : '' }}"
-                                href="{{ url('/sign-up') }}">Register</a>
+                                href="{{ url('/sign-up') }}">Daftar</a>
                         </li>
 
                     </ul>
@@ -160,17 +167,19 @@
                     </div>
                     <div class="col-lg-3 ml-auto mb-4 mb-lg-0">
                         <div class="footer-nav-wrap text-white">
-                            <h5 class="mb-3 text-white">Support</h5>
+                            <h5 class="mb-3 text-white">Alamat</h5>
                             <ul class="list-unstyled support-list">
                                 <li class="mb-2 d-flex align-items-center"><span class="ti-location-pin mr-2"></span>
-                                    Universitas Negeri Jakarta, Fakultas Ilmu Pendidikan, Prodi Teknologi Pendidikan
+                                    Jl. Rawamangun Muka, RT.11/RW.14, Rawamangun, Pulo Gadung, Kota Jakarta Timur,
+                                    Daerah Khusus
+                                    Ibukota Jakarta 13220
                                 </li>
                                 <li class="mb-2 d-flex align-items-center"><span class="ti-mobile mr-2"></span> <a
-                                        href="tel:+61283766284"> +61 2 8376 6284</a></li>
+                                        href="tel:+61283766284"> (021) 4898486</a></li>
                                 <li class="mb-2 d-flex align-items-center"><span class="ti-email mr-2"></span><a
-                                        href="wisdomeducation@sepatuloal.com"> wisdomeducation@sepatuloal.com</a></li>
+                                        href="mailto:humas@unj.ac.id"> humas@unj.ac.id/a></li>
                                 <li class="mb-2 d-flex align-items-center"><span class="ti-world mr-2"></span><a
-                                        href="#"> www.wisdomeducation.com</a></li>
+                                        href="#"> www.wisdomeducation.id</a></li>
                             </ul>
                         </div>
                     </div>

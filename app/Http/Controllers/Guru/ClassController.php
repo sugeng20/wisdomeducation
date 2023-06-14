@@ -57,6 +57,12 @@ class ClassController extends Controller
         if($request->hasFile('gambar')) {
             $kelas->gambar = $request->file('gambar')->store('gambar');
         }
+        $kelas->link_rpp =  $request->input('link_rpp');
+        $kelas->link_vr =  $request->input('link_vr');
+        $kelas->link_ar =  $request->input('link_ar');
+        if($request->hasFile('qr_code_ar')) {
+            $kelas->qr_code_ar = $request->file('qr_code_ar')->store('gambar');
+        }
         $kelas->save();
 
         return redirect()->route('class-teacher.index')->with('success', 'Berhasil Menambahkan Kelas Baru');
@@ -113,6 +119,12 @@ class ClassController extends Controller
             Storage::delete($kelas->gambar);
             $kelas->gambar = $request->file('gambar')->store('gambar');
         }
+        $kelas->link_rpp =  $request->input('link_rpp');
+        $kelas->link_vr =  $request->input('link_vr');
+        $kelas->link_ar =  $request->input('link_ar');
+        if($request->hasFile('qr_code_ar')) {
+            $kelas->qr_code_ar = $request->file('qr_code_ar')->store('gambar');
+        }
         $kelas->save();
 
         return redirect()->route('class-teacher.edit', $id)->with('success', 'Berhasil Mengubah Kelas');
@@ -128,6 +140,7 @@ class ClassController extends Controller
     {
         $kelas = Kelas::findOrFail($id);
         Storage::delete($kelas->gambar);
+        Storage::delete($kelas->qr_code_ar);
         $kelas->delete();
         return redirect()->route('class-teacher.index')->with('success', 'Berhasil Menhapus Kelas');
     }

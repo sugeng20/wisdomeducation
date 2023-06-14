@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\MataPelajaran;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,6 +15,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(JabatanSeeder::class);
         $this->call(SekolahSeeder::class);
-        $this->call(MataPelajaran::class);
+        $this->call(MataPelajaranSeeder::class);
     }
 }

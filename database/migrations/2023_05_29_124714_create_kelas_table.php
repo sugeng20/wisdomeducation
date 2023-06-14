@@ -18,8 +18,12 @@ class CreateKelasTable extends Migration
             $table->bigInteger('guru_id');
             $table->bigInteger('matpel_id');
             $table->string('nama_kelas');
-            $table->string('deskripsi');
-            $table->string('gambar');
+            $table->text('deskripsi');
+            $table->text('gambar');
+            $table->text('link_rpp');
+            $table->text('link_ar');
+            $table->text('link_vr');
+            $table->text('qr_code_ar');
             $table->timestamps();
         });
     }

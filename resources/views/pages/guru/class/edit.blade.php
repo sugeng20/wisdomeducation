@@ -59,7 +59,7 @@ Edit Class
                         <label for="matpel_id">Mata Pelajaran</label>
                     </div>
                     <div class="col-lg-4">
-                        <select name="matpel_id" id="matpel_id" class="form-control">
+                        <select name="matpel_id" id="matpel_id" class="form-control" required>
                             <option value="">- Pilih Mata Pelajaran -</option>
                             @foreach ($data['mata_pelajaran'] as $matpel)
                             <option value="{{ $matpel->id }}" {{ $kelas->matpel_id == $matpel->id ? 'selected' : ''
@@ -76,7 +76,7 @@ Edit Class
                     </div>
                     <div class="col-lg-4">
                         <input type="text" name="nama_kelas" id="nama_kelas" class="form-control"
-                            value="{{ $kelas->nama_kelas }}">
+                            value="{{ $kelas->nama_kelas }}" required>
                     </div>
                 </div>
 
@@ -85,9 +85,10 @@ Edit Class
                         <label for="gambar">Cover Kelas</label>
                     </div>
                     <div class="col-lg-4">
+
+
+                        <img width="200" src="{{ Storage::url($kelas->gambar) }}" alt="" class="img-fluid">
                         <input type="file" name="gambar" id="gambar" class="form-control">
-                        <a href="{{ Storage::url($kelas->gambar) }}" target="_blank" class="btn btn-primary mt-1">Lihat
-                            Gambar</a>
                     </div>
                 </div>
 
@@ -97,7 +98,47 @@ Edit Class
                     </div>
                     <div class="col-lg-4">
                         <input type="text" name="deskripsi" id="deskripsi" value="{{ $kelas->deskripsi }}"
-                            class="form-control">
+                            class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-3">
+                    <div class="col-lg-2">
+                        <label for="link_rpp">Link Gdrive RPP</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" name="link_rpp" id="link_rpp" class="form-control"
+                            value="{{ $kelas->link_rpp }}" required>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-3">
+                    <div class="col-lg-2">
+                        <label for="link_vr">Link Gdrive Media VR</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" name="link_vr" id="link_vr" class="form-control"
+                            value="{{ $kelas->link_vr }}" required>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-3">
+                    <div class="col-lg-2">
+                        <label for="link_ar">Link Gdrive Media AR</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" name="link_ar" id="link_ar" class="form-control"
+                            value="{{ $kelas->link_ar }}" required>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-3">
+                    <div class="col-lg-2">
+                        <label for="qr_code_ar">Qr Code AR</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <img width="200" src="{{ Storage::url($kelas->qr_code_ar) }}" alt="" class="img-fluid">
+                        <input type="file" name="qr_code_ar" id="qr_code_ar" class="form-control">
                     </div>
                 </div>
 

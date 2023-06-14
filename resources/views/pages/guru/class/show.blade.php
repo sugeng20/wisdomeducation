@@ -28,39 +28,50 @@ Detail Class
 <!--overflow block start-->
 <div class="overflow-hidden">
     <!--about us section start-->
-    <section id="about" class="about-us mt-3">
+    <section id="about" class="about-us mt-5">
         <div class="container">
-            <h5 class="text-center">Detail Kelas</h5>
-
-
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-6">
                     <img src="{{ Storage::url($kelas->gambar) }}" alt="" class="img-fluid">
                 </div>
-                <div class="col-lg-7">
-                    <h1>{{ $kelas->deskripsi }}</h1>
+                <div class="col-lg-6">
+                    <h2>{{ $kelas->deskripsi }}</h2>
                     <p>
                         Sebelum memulai kelas pastikan Anda telah membaca panduan pada halaman "Unduhan" Kemudian
                         silahkan
                         membaca RPP dan Mulai
                         Kelas Pembelajaran baik dengan Virtual Reality atau Augmented Reality
                     </p>
-                    <a href="#" class="btn btn-primary btn-block">Unduh RPP {{ $kelas->nama_kelas }}</a>
+                    <a href="{{ $kelas->link_rpp }}" class="btn btn-primary btn-block" target="_blank">Unduh RPP {{
+                        $kelas->nama_kelas }}</a>
                 </div>
                 <div class="col-12">
-                    <h1 class="mt-5">Kelas Pembelajaran VR</h1>
+                    <h2 class="mt-5">Orientasi Masalah</h2>
+                    <hr>
+                </div>
+                <div class="col-12 text-center">
+                    <div class="sketchfab-embed-wrapper"> <iframe title="Rapid Punching Animation" frameborder="0"
+                            allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                            allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                            execution-while-out-of-viewport execution-while-not-rendered web-share width="640"
+                            height="480" src="https://sketchfab.com/models/898c066dc84b4fe7b19fa2f40f4fd145/embed">
+                        </iframe> </div>
                 </div>
                 <div class="col-12">
-                    <a href="#" class="btn btn-primary btn-block">Unduh Aplikasi Wisdom VR</a>
+                    <h2 class="mt-5">Media Pembelajaran VR</h2>
+                </div>
+                <div class="col-12">
+                    <a href="{{ $kelas->link_vr }}" class="btn btn-primary btn-block" target="_blank">Unduh Aplikasi
+                        Wisdom VR</a>
                     <hr>
                 </div>
 
                 <div class="col-12">
-                    <h1 class="mt-5">Kelas Pembelajaran AR</h1>
+                    <h2 class="mt-5">Media Pembelajaran AR</h2>
                     <hr>
                 </div>
                 <div class="col-lg-5">
-                    <img src="{{ asset('img/qrcode.jpeg') }}" alt="" class="img-fluid">
+                    <img src="{{ Storage::url($kelas->qr_code_ar) }}" alt="" class="img-fluid">
                 </div>
                 <div class="col-lg-7">
                     <h5 class="mt-5">
@@ -68,7 +79,8 @@ Detail Class
                         pembelajaran
                         AR
                     </h5>
-                    <a href="#" class="btn btn-primary btn-block">Akses Link Pembelajaran AR</a>
+                    <a href="{{ $kelas->link_ar }}" class="btn btn-primary btn-block" target="_blank">Akses Link
+                        Pembelajaran AR</a>
                 </div>
             </div>
         </div>

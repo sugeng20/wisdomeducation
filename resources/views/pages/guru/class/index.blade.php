@@ -58,7 +58,7 @@ Class
                         <label for="matpel_id">Mata Pelajaran</label>
                     </div>
                     <div class="col-lg-4">
-                        <select name="matpel_id" id="matpel_id" class="form-control">
+                        <select name="matpel_id" id="matpel_id" class="form-control" required>
                             <option value="">- Pilih Mata Pelajaran -</option>
                             @foreach ($data['mata_pelajaran'] as $matpel)
                             <option value="{{ $matpel->id }}">{{ $matpel->nama_matpel }}</option>
@@ -72,7 +72,7 @@ Class
                         <label for="nama_kelas">Nama Kelas</label>
                     </div>
                     <div class="col-lg-4">
-                        <input type="text" name="nama_kelas" id="nama_kelas" class="form-control">
+                        <input type="text" name="nama_kelas" id="nama_kelas" class="form-control" required>
                     </div>
                 </div>
 
@@ -81,7 +81,7 @@ Class
                         <label for="gambar">Cover Kelas</label>
                     </div>
                     <div class="col-lg-4">
-                        <input type="file" name="gambar" id="gambar" class="form-control">
+                        <input type="file" name="gambar" id="gambar" class="form-control" required>
                     </div>
                 </div>
 
@@ -90,7 +90,45 @@ Class
                         <label for="deskripsi">Deskripsi Singkat</label>
                     </div>
                     <div class="col-lg-4">
-                        <input type="text" name="deskripsi" id="deskripsi" class="form-control">
+                        <input type="text" name="deskripsi" id="deskripsi" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-3">
+                    <div class="col-lg-2">
+                        <label for="link_rpp">Link Gdrive RPP</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" name="link_rpp" id="link_rpp" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-3">
+                    <div class="col-lg-2">
+                        <label for="link_vr">Link Gdrive Media VR</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" name="link_vr" id="link_vr" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-3">
+                    <div class="col-lg-2">
+                        <label for="link_ar">Link Gdrive Media AR</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" name="link_ar" id="link_ar" class="form-control" required>
+                    </div>
+                </div>
+
+
+
+                <div class="row align-items-center mb-3">
+                    <div class="col-lg-2">
+                        <label for="qr_code_ar">Qr Code AR</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="file" name="qr_code_ar" id="qr_code_ar" class="form-control" required>
                     </div>
                 </div>
 
@@ -108,7 +146,8 @@ Class
                         <span class="category position-absolute badge badge-pill badge-primary"></span>
                         <img src="{{ Storage::url($kelas->gambar) }}" class="card-img-top position-relative" alt="blog">
                         <div class="card-body">
-                            <h3 class="h5 card-title"><a href="#">{{ $kelas->nama_kelas }}</a></h3>
+                            <h3 class="h5 card-title"><a href="{{ route('class-teacher.show', $kelas->id) }}">{{
+                                    $kelas->nama_kelas }}</a></h3>
                             <p class="card-text">{{ $kelas->deskripsi }}</p>
                         </div>
                         <div class="card-footer">

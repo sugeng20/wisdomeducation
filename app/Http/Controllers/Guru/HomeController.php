@@ -13,4 +13,9 @@ class HomeController extends Controller
         $data['kelas'] = Kelas::with('mataPelajaran')->get();
         return view('pages.guru.home', compact('data'));
     }
+
+    public function unduhan()
+    {
+        return view('pages.guru.unduhan');
+    }
 }
