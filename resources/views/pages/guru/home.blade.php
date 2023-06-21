@@ -1,7 +1,7 @@
 @extends('layouts.guru')
 
 @section('title')
-Halaman Guru
+Beranda
 @endsection
 
 @section('content')
@@ -11,11 +11,11 @@ Halaman Guru
         <div class="row align-items-center justify-content-center">
             <div class="col-md-9 col-lg-7">
                 <div class="page-header-content text-white text-center pt-sm-5 pt-md-5 pt-lg-0">
-                    <h1 class="text-white mb-0">Halaman Guru</h1>
+                    <h1 class="text-white mb-0">Beranda</h1>
                     <div class="custom-breadcrumb">
                         <ol class="breadcrumb d-inline-block bg-transparent list-inline py-0">
                             <li class="list-inline-item breadcrumb-item">Pages</li>
-                            <li class="list-inline-item breadcrumb-item active">Guru</li>
+                            <li class="list-inline-item breadcrumb-item active">Beranda</li>
                         </ol>
                     </div>
                 </div>
@@ -31,7 +31,7 @@ Halaman Guru
     <section id="about" class="about-us ptb-100">
         <div class="container">
             <div class="row align-items-center justify-content-between">
-                <h2>Kelas</h2>
+                <h2>Materi</h2>
             </div>
             <div class="row">
                 @foreach ($data['kelas'] as $kelas)
@@ -56,99 +56,7 @@ Halaman Guru
 
             </div>
 
-            <div class="row align-items-center justify-content-between mt-5">
-                <h2>Siswa</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="single-blog-card card border-0 shadow-sm white-bg">
-                        <span class="category position-absolute badge badge-pill badge-primary">Kelas IV</span>
-                        <img src="{{ asset('img/kelas-jelajah/image-1.jpg') }}" class="card-img-top position-relative"
-                            alt="blog">
-                        <div class="card-body">
-                            <h3 class="h5 card-title"><a href="#">Appropriately productize fully</a></h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk.</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-4">
-                    <div class="single-blog-card card border-0 shadow-sm white-bg">
-                        <span class="category position-absolute badge badge-pill badge-primary">Kelas IV</span>
-                        <img src="{{ asset('img/kelas-jelajah/image-2.jpg') }}" class="card-img-top position-relative"
-                            alt="blog">
-                        <div class="card-body">
-                            <h3 class="h5 card-title"><a href="#">Appropriately productize fully</a></h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="single-blog-card card border-0 shadow-sm white-bg">
-                        <span class="category position-absolute badge badge-pill badge-primary">Kelas IV</span>
-                        <img src="{{ asset('img/kelas-jelajah/image-3.jpg') }}" class="card-img-top position-relative"
-                            alt="blog">
-                        <div class="card-body">
-                            <h3 class="h5 card-title"><a href="#">Appropriately productize fully</a></h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
-
-            <div class="row align-items-center justify-content-between mt-5">
-                <h2>Sertifikat</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="single-blog-card card border-0 shadow-sm white-bg">
-                        <span class="category position-absolute badge badge-pill badge-primary">Kelas IV</span>
-                        <img src="{{ asset('img/kelas-jelajah/image-1.jpg') }}" class="card-img-top position-relative"
-                            alt="blog">
-                        <div class="card-body">
-                            <h3 class="h5 card-title"><a href="#">Appropriately productize fully</a></h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="single-blog-card card border-0 shadow-sm white-bg">
-                        <span class="category position-absolute badge badge-pill badge-primary">Kelas IV</span>
-                        <img src="{{ asset('img/kelas-jelajah/image-2.jpg') }}" class="card-img-top position-relative"
-                            alt="blog">
-                        <div class="card-body">
-                            <h3 class="h5 card-title"><a href="#">Appropriately productize fully</a></h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="single-blog-card card border-0 shadow-sm white-bg">
-                        <span class="category position-absolute badge badge-pill badge-primary">Kelas IV</span>
-                        <img src="{{ asset('img/kelas-jelajah/image-3.jpg') }}" class="card-img-top position-relative"
-                            alt="blog">
-                        <div class="card-body">
-                            <h3 class="h5 card-title"><a href="#">Appropriately productize fully</a></h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
         </div>
     </section>
     <!--about us section end-->

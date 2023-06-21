@@ -84,18 +84,12 @@
                                 <i class="ti-home text-bold text-black"></i>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link page-scroll {{ Request::segment(1) == 'student' ? 'active' : '' }}"
-                                href="{{ url('/student') }}">Siswa</a>
-                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(2) == 'class-teacher' ? 'active' : '' }}"
                                 href="{{ route('class-teacher.index') }}">Kelas</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link page-scroll {{ Request::segment(1) == 'certificate' ? 'active' : '' }}"
-                                href="{{ url('/certificate') }}">Sertifikat</a>
-                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(2) == 'kreasi' ? 'active' : '' }}"
                                 href="{{ route('kreasi.index') }}">Wadah Kreasi</a>
@@ -144,43 +138,33 @@
 
                             <div class="social-list-wrap">
                                 <ul class="social-list list-inline list-unstyled">
-                                    <li class="list-inline-item"><a href="#" target="_blank" title="Facebook"><span
-                                                class="ti-facebook"></span></a></li>
-                                    <li class="list-inline-item"><a href="#" target="_blank" title="Twitter"><span
-                                                class="ti-twitter"></span></a></li>
-                                    <li class="list-inline-item"><a href="#" target="_blank" title="Instagram"><span
-                                                class="ti-instagram"></span></a></li>
-                                    <li class="list-inline-item"><a href="#" target="_blank" title="printerst"><span
-                                                class="ti-pinterest"></span></a></li>
+
+
+                                    <li class="list-inline-item"><a href="https://www.instagram.com/wisdomeducation.id/"
+                                            target="_blank" title="Instagram"><span class="ti-instagram"></span>
+                                            @wisdomeducation</a></li>
+
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 ml-auto mb-4 mb-lg-0">
-                        <div class="footer-nav-wrap text-white">
-                            <h5 class="mb-3 text-white">Others Links</h5>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><a href="#">About Us</a></li>
-                                <li class="mb-2"><a href="#">Contact Us</a></li>
-                                <li class="mb-2"><a href="#">Pricing</a></li>
-                                <li class="mb-2"><a href="#">Privacy Policy</a></li>
-                                <li class="mb-2"><a href="#">Terms and Conditions</a></li>
-                            </ul>
-                        </div>
-                    </div>
+
                     <div class="col-lg-3 ml-auto mb-4 mb-lg-0">
                         <div class="footer-nav-wrap text-white">
                             <h5 class="mb-3 text-white">Support</h5>
                             <ul class="list-unstyled support-list">
                                 <li class="mb-2 d-flex align-items-center"><span class="ti-location-pin mr-2"></span>
-                                    Universitas Negeri Jakarta, Fakultas Ilmu Pendidikan, Prodi Teknologi Pendidikan
+                                    Jl. Rawamangun Muka, RT.11/RW.14, Rawamangun, Pulo Gadung, Kota Jakarta Timur,
+                                    Daerah Khusus Ibukota Jakarta 13220
                                 </li>
                                 <li class="mb-2 d-flex align-items-center"><span class="ti-mobile mr-2"></span> <a
-                                        href="tel:+61283766284"> +61 2 8376 6284</a></li>
+                                        href="tel:+6285171150224"> 0851-7115-0224</a></li>
                                 <li class="mb-2 d-flex align-items-center"><span class="ti-email mr-2"></span><a
-                                        href="wisdomeducation@sepatuloal.com"> wisdomeducation@sepatuloal.com</a></li>
+                                        href="mailto:wisdomeducation.id@gmail.com"> wisdomeducation.id@gmail.com</a>
+                                </li>
                                 <li class="mb-2 d-flex align-items-center"><span class="ti-world mr-2"></span><a
-                                        href="#"> www.wisdomeducation.com</a></li>
+                                        href="#">
+                                        www.wisdomeducation.id</a></li>
                             </ul>
                         </div>
                     </div>
@@ -195,9 +179,7 @@
             <div class="container">
                 <div class="row text-center justify-content-center">
                     <div class="col-md-6 col-lg-5">
-                        <p class="copyright-text pb-0 mb-0">Copyrights © {{ date('Y') }} All
-                            rights reserved by
-                            <a href="https://itgenic.co.id">itgenic.co.id</a>
+                        <p class="copyright-text pb-0 mb-0">wisdomeducation.id
                         </p>
                     </div>
                 </div>
