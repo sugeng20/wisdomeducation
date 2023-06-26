@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- SEO Meta description -->
-    <meta name="description" content="Wisdom Education">
-    <meta name="author" content="ThemeTags">
+    <meta name="description"
+        content="Website Wisdom Education (WE) hadir sebagai inovasi website sumber belajar dengan memadukan teknologi virtual reality dan augmented reality serta mengedepankan metode problem based learning">
+    <meta name="author"
+        content="Team Wisdom Education, Universitas Negeri Jakarta, UNJ, Fakultas Ilmu Pendidikan, Teknologi Pendidikan, TP UNJ">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-    <meta property="og:site_name" content=Wisdom Education"" /> <!-- website name -->
-    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:site_name" content="Wisdom Education" /> <!-- website name -->
+    <meta property="og:site" content="{{ url('/') }}" /> <!-- website link -->
     <meta property="og:title" content="Wisdom Education" /> <!-- title shown in the actual shared post -->
     <meta property="og:description"
         content="Website WE hadir sebagai inovasi website sumber belajar dengan memadukan teknologi virtual reality dan augmented reality serta mengedepankan metode problem based learning" />

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Guru\ClassController;
 use App\Http\Controllers\Guru\HomeController;
@@ -33,4 +34,8 @@ Route::middleware(['auth'])->prefix('guru')->group(function() {
     Route::get('/unduhan', [HomeController::class, 'unduhan']);
     Route::resource('class-teacher', ClassController::class);
     Route::resource('kreasi', KreasiController::class);
+});
+
+Route::middleware(['auth'])->prefix('admin')->group(function() {
+    Route::get('/', [DashboardController::class, 'index']);
 });

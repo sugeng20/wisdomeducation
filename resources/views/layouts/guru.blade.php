@@ -11,7 +11,7 @@
     <meta name="author" content="ThemeTags">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-    <meta property="og:site_name" content=Wisdom Education"" /> <!-- website name -->
+    <meta property="og:site_name" content="Wisdom Education" /> <!-- website name -->
     <meta property="og:site" content="" /> <!-- website link -->
     <meta property="og:title" content="Wisdom Education" /> <!-- title shown in the actual shared post -->
     <meta property="og:description"
