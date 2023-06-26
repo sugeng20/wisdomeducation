@@ -79,12 +79,23 @@
                     <ul class="navbar-nav ml-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link page-scroll {{ Request::segment(2) == '' ? 'active' : '' }}"
+                            <a class="nav-link page-scroll {{ Request::segment(1) == 'guru' ? 'active' : '' }}"
                                 href="{{ url('/guru') }}">
                                 <i class="ti-home text-bold text-black"></i>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll {{ Request::segment(1) == 'about' ? 'active' : '' }}"
+                                href="{{ url('/about') }}">Tentang</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll {{ Request::segment(1) == 'contact' ? 'active' : '' }}"
+                                href="{{ url('/contact') }}">Kontak</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll {{ Request::segment(1) == 'faq' ? 'active' : '' }}"
+                                href="{{ url('/faq') }}">FAQ</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll {{ Request::segment(2) == 'class-teacher' ? 'active' : '' }}"
                                 href="{{ route('class-teacher.index') }}">Kelas</a>
@@ -146,6 +157,35 @@
 
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 ml-auto mb-4 mb-lg-0">
+                        <div class="footer-nav-wrap text-white">
+                            <h5 class="mb-3 text-white">Link Terkait</h5>
+                            <ul class="list-unstyled support-list">
+                                <li class="mb-2 d-flex align-items-center">
+                                    <a href="{{ url('guru') }}">Beranda</a>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <a href="{{ url('about') }}">Tentang</a>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <a href="{{ url('contact') }}">Kontak</a>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <a href="{{ url('faq') }}">FAQ</a>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <a href="{{ route('class-teacher.index') }}">Kelas</a>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <a href="{{ url('/guru/unduhan') }}">Wadah Kreasi</a>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <a href="{{ url('/guru/unduhan') }}">Unduhan</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 

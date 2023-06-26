@@ -31,7 +31,7 @@ Beranda
     <section id="about" class="about-us ptb-100">
         <div class="container">
             <div class="row align-items-center justify-content-between">
-                <h2>Materi</h2>
+                <h2>Kelas</h2>
             </div>
             <div class="row">
                 @foreach ($data['kelas'] as $kelas)

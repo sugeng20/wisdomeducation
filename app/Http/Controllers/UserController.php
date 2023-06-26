@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kelas;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -15,17 +16,32 @@ class UserController extends Controller
 
     public function about()
     {
-        return view('pages.user.about');
+        if(Auth::user()->role == 'GURU') {
+            $layout = 'guru';
+        } else {
+            $layout = 'user';
+        }
+        return view('pages.user.about', compact('layout'));
     }
 
     public function faq()
     {
-        return view('pages.user.faq');
+        if(Auth::user()->role == 'GURU') {
+            $layout = 'guru';
+        } else {
+            $layout = 'user';
+        }
+        return view('pages.user.faq', compact('layout'));
     }
 
     public function contact()
     {
-        return view('pages.user.contact');
+        if(Auth::user()->role == 'GURU') {
+            $layout = 'guru';
+        } else {
+            $layout = 'user';
+        }
+        return view('pages.user.contact', compact('layout'));
     }
 
 }
