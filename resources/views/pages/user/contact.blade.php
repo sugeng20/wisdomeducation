@@ -51,9 +51,9 @@ Kontak
                         Ibukota Jakarta 13220
                     </p>
                     <ul>
-                        <li><span>Phone: (021) 4898486</span></li>
-                        <li><span>Email : <a href="mailto:humas@unj.ac.id">humas@unj.ac.id</a></span>
+                        <li><span>Email : <a href="wisdomeducation.id@gmail.com">wisdomeducation.id@gmail.com</a></span>
                         </li>
+                        <li><span>No. HP: 0851-7115-0224</span></li>
                     </ul>
                 </div>
             </div>
