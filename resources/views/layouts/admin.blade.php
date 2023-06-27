@@ -59,6 +59,13 @@
                         </li>
                         <!--end nav-item-->
 
+                        <li class="nav-item">
+                            <a class="nav-link {{ Request::segment(2) == 'guru' ? 'menuitem-active' : '' }}"
+                                href="{{ route('guru.index') }}"><i
+                                    class="ti ti-users menu-icon"></i><span>Guru</span></a>
+                        </li>
+                        <!--end nav-item-->
+
                     </ul>
                 </div>
                 <!--end sidebarCollapse-->
