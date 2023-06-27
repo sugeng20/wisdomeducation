@@ -66,6 +66,13 @@
                         </li>
                         <!--end nav-item-->
 
+                        <li class="nav-item">
+                            <a class="nav-link {{ Request::segment(2) == 'sekolah' ? 'menuitem-active' : '' }}"
+                                href="{{ route('sekolah.index') }}"><i
+                                    class="ti ti-school menu-icon"></i><span>Sekolah</span></a>
+                        </li>
+                        <!--end nav-item-->
+
                     </ul>
                 </div>
                 <!--end sidebarCollapse-->

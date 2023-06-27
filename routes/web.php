@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\GuruController;
+use App\Http\Controllers\Admin\SekolahController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Guru\ClassController;
 use App\Http\Controllers\Guru\HomeController;
@@ -41,4 +42,5 @@ Route::middleware(['auth'])->prefix('admin')->group(function() {
     Route::get('/', [DashboardController::class, 'index']);
     Route::post('guru/ganti-password/{id}', [GuruController::class, 'gantiPassword'])->name('guru.ganti-password');
     Route::resource('guru', GuruController::class);
+    Route::resource('sekolah', SekolahController::class);
 });
