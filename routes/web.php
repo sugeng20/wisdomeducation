@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\GuruController;
 use App\Http\Controllers\Admin\SekolahController;
 use App\Http\Controllers\AuthController;
@@ -43,4 +44,5 @@ Route::middleware(['auth'])->prefix('admin')->group(function() {
     Route::post('guru/ganti-password/{id}', [GuruController::class, 'gantiPassword'])->name('guru.ganti-password');
     Route::resource('guru', GuruController::class);
     Route::resource('sekolah', SekolahController::class);
+    Route::resource('faq', FaqController::class);
 });

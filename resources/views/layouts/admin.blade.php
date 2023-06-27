@@ -73,6 +73,13 @@
                         </li>
                         <!--end nav-item-->
 
+                        <li class="nav-item">
+                            <a class="nav-link {{ Request::segment(2) == 'faq' ? 'menuitem-active' : '' }}"
+                                href="{{ route('faq.index') }}"><i
+                                    class="ti ti-question-mark menu-icon"></i><span>FAQ</span></a>
+                        </li>
+                        <!--end nav-item-->
+
                     </ul>
                 </div>
                 <!--end sidebarCollapse-->
