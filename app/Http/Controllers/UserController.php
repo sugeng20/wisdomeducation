@@ -17,7 +17,7 @@ class UserController extends Controller
 
     public function about()
     {
-        if(Auth::user()->role == 'GURU') {
+        if(Auth::user()) {
             $layout = 'guru';
         } else {
             $layout = 'user';
@@ -27,7 +27,7 @@ class UserController extends Controller
 
     public function faq()
     {
-        if(Auth::user()->role == 'GURU') {
+        if(Auth::user()) {
             $layout = 'guru';
         } else {
             $layout = 'user';
@@ -38,7 +38,7 @@ class UserController extends Controller
 
     public function contact()
     {
-        if(Auth::user()->role == 'GURU') {
+        if(Auth::user()) {
             $layout = 'guru';
         } else {
             $layout = 'user';
