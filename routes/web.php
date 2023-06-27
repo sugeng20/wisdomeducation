@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\GuruController;
+use App\Http\Controllers\Admin\JabatanController;
 use App\Http\Controllers\Admin\SekolahController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Guru\ClassController;
@@ -45,4 +46,5 @@ Route::middleware(['auth'])->prefix('admin')->group(function() {
     Route::resource('guru', GuruController::class);
     Route::resource('sekolah', SekolahController::class);
     Route::resource('faq', FaqController::class);
+    Route::resource('jabatan', JabatanController::class);
 });

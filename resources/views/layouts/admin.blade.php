@@ -80,6 +80,13 @@
                         </li>
                         <!--end nav-item-->
 
+                        <li class="nav-item">
+                            <a class="nav-link {{ Request::segment(2) == 'jabatan' ? 'menuitem-active' : '' }}"
+                                href="{{ route('jabatan.index') }}"><i
+                                    class="ti ti-star menu-icon"></i><span>Jabatan</span></a>
+                        </li>
+                        <!--end nav-item-->
+
                     </ul>
                 </div>
                 <!--end sidebarCollapse-->
