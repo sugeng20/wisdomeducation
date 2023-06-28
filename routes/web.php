@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\JabatanController;
 use App\Http\Controllers\Admin\MataPelajaranController;
 use App\Http\Controllers\Admin\SekolahController;
 use App\Http\Controllers\Admin\UnduhanController;
+use App\Http\Controllers\Admin\WadahKreasiController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Guru\ClassController;
 use App\Http\Controllers\Guru\HomeController;
@@ -51,4 +52,5 @@ Route::middleware(['auth'])->prefix('admin')->group(function() {
     Route::resource('jabatan', JabatanController::class);
     Route::resource('unduhan', UnduhanController::class);
     Route::resource('mata-pelajaran', MataPelajaranController::class);
+    Route::resource('wadah-kreasi', WadahKreasiController::class);
 });

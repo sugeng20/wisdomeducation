@@ -102,6 +102,14 @@
                         </li>
                         <!--end nav-item-->
 
+                        <li class="nav-item">
+                            <a class="nav-link {{ Request::segment(2) == 'wadah-kreasi' ? 'menuitem-active' : '' }}"
+                                href="{{ route('wadah-kreasi.index') }}"><i
+                                    class="ti ti-archive menu-icon"></i><span>Wadah
+                                    Kreasi</span></a>
+                        </li>
+                        <!--end nav-item-->
+
                     </ul>
                 </div>
                 <!--end sidebarCollapse-->
