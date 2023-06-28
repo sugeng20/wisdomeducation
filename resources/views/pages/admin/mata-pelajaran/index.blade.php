@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-Sekolah
+Mata Pelajaran
 @endsection
 
 @section('content')
@@ -15,11 +15,11 @@ Sekolah
                         <li class="breadcrumb-item"><a href="#">Wisdomeducation</a>
                         </li>
                         <!--end nav-item-->
-                        <li class="breadcrumb-item"><a href="#">Sekolah</a>
+                        <li class="breadcrumb-item"><a href="#">Mata Pelajaran</a>
                         </li>
                     </ol>
                 </div>
-                <h4 class="page-title">Sekolah</h4>
+                <h4 class="page-title">Mata Pelajaran</h4>
             </div>
             <!--end page-title-box-->
         </div>
@@ -31,8 +31,9 @@ Sekolah
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <a href="{{ route('sekolah.create') }}" class="btn btn-primary"><i class="mdi mdi-plus-circle"></i>
-                        Tambah Sekolah
+                    <a href="{{ route('mata-pelajaran.create') }}" class="btn btn-primary"><i
+                            class="mdi mdi-plus-circle"></i>
+                        Tambah Mata Pelajaran
                     </a>
 
                     @if (Session::get('success'))
@@ -47,8 +48,7 @@ Sekolah
                             <thead class="thead-light">
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama Sekolah</th>
-                                    <th>Alamat Sekolah</th>
+                                    <th>Mata Pelajaran</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -59,14 +59,13 @@ Sekolah
                                 @forelse ($items as $item)
                                 <tr>
                                     <td>{{ $no++ }}</td>
-                                    <td>{{ $item->nama_sekolah }}</td>
-                                    <td>{{ $item->alamat_sekolah }}</td>
+                                    <td>{{ $item->nama_matpel }}</td>
                                     <td>
-                                        <a href="{{ route('sekolah.edit', $item->id) }}" title="Edit"
+                                        <a href="{{ route('mata-pelajaran.edit', $item->id) }}" title="Edit"
                                             class="btn btn-warning btn-sm"><i class="mdi mdi-square-edit-outline"></i>
                                         </a>
 
-                                        <form class="d-inline" action="{{ route('sekolah.destroy', $item->id) }}"
+                                        <form class="d-inline" action="{{ route('mata-pelajaran.destroy', $item->id) }}"
                                             method="POST" onsubmit="return confirm('Apakah Anda Yakin?')">
                                             @csrf
                                             @method('delete')

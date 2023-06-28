@@ -88,6 +88,14 @@
                         <!--end nav-item-->
 
                         <li class="nav-item">
+                            <a class="nav-link {{ Request::segment(2) == 'mata-pelajaran' ? 'menuitem-active' : '' }}"
+                                href="{{ route('mata-pelajaran.index') }}"><i
+                                    class="ti ti-archive menu-icon"></i><span>Mata
+                                    Pelajaran</span></a>
+                        </li>
+                        <!--end nav-item-->
+
+                        <li class="nav-item">
                             <a class="nav-link {{ Request::segment(2) == 'unduhan' ? 'menuitem-active' : '' }}"
                                 href="{{ route('unduhan.index') }}"><i
                                     class="ti ti-download menu-icon"></i><span>Unduhan</span></a>

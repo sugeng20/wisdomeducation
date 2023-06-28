@@ -12,7 +12,7 @@ Jabatan
             <div class="page-title-box">
                 <div class="float-end">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Sepatulola</a>
+                        <li class="breadcrumb-item"><a href="#">Wisdomeducation</a>
                         </li>
                         <!--end nav-item-->
                         <li class="breadcrumb-item"><a href="#">Jabatan</a>
