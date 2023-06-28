@@ -46,7 +46,7 @@ class UnduhanController extends Controller
 
         $data = $request->all();
         if($request->hasFile('cover_gambar')) {
-            $data['cover_gambar'] = $request->file('cover_gambar')->store('cover_gambar');
+            $data['cover_gambar'] = $request->file('cover_gambar')->store('gambar');
         }
         Unduhan::create($data);
 

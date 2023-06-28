@@ -143,7 +143,9 @@ Kelas
                 @foreach ($data['kelas'] as $kelas)
                 <div class="col-md-4">
                     <div class="single-blog-card card border-0 shadow-sm white-bg">
-                        <span class="category position-absolute badge badge-pill badge-primary"></span>
+                        <span class="category position-absolute badge badge-pill badge-primary">{{
+                            $kelas->mataPelajaran->nama_matpel
+                            }}</span>
                         <img src="{{ Storage::url($kelas->gambar) }}" class="card-img-top position-relative" alt="blog">
                         <div class="card-body">
                             <h3 class="h5 card-title"><a href="{{ route('class-teacher.show', $kelas->id) }}">{{

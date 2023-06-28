@@ -67,6 +67,13 @@
                         <!--end nav-item-->
 
                         <li class="nav-item">
+                            <a class="nav-link {{ Request::segment(2) == 'kelas' ? 'menuitem-active' : '' }}"
+                                href="{{ route('kelas.index') }}"><i
+                                    class="ti ti-archive menu-icon"></i><span>Kelas</span></a>
+                        </li>
+                        <!--end nav-item-->
+
+                        <li class="nav-item">
                             <a class="nav-link {{ Request::segment(2) == 'sekolah' ? 'menuitem-active' : '' }}"
                                 href="{{ route('sekolah.index') }}"><i
                                     class="ti ti-school menu-icon"></i><span>Sekolah</span></a>
