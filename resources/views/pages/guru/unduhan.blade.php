@@ -32,13 +32,15 @@ Halaman Unduhan
         <div class="container">
             <div class="row justify-content-center">
 
+                @foreach ($data['unduhan'] as $unduhan)
                 <div class="col-lg-4 col-md mb-5">
                     <div class="card text-center single-pricing-pack">
                         <div class="pt-4">
-                            <h5>Panduan Pemanfaatan Storyboard</h5>
+                            <h5>{{ $unduhan->judul }}</h5>
                         </div>
                         <div class="pricing-img mt-4">
-                            <img src="{{ asset('/img/basic.svg') }}" alt="pricing img" class="img-fluid">
+                            <img src="{{ $unduhan->cover_gambar ? Storage::url($unduhan->cover_gambar) : asset('/img/basic.svg') }}"
+                                alt="pricing img" class="img-fluid">
                         </div>
                         <div class="card-header py-4 border-0 pricing-header">
                             {{-- <div class="h1 text-center mb-0">$<span class="price font-weight-bolder">29</span>
@@ -46,129 +48,11 @@ Halaman Unduhan
                         </div>
                         <div class="card-body">
 
-                            <a href="https://drive.google.com/file/d/1JGQaCLzFZtmd4CyV3fcgE4_yldq75irG/view?usp=sharing"
-                                class="btn outline-btn mb-3" target="_blank">Download</a>
+                            <a href="{{ $unduhan->link }}" class="btn outline-btn mb-3" target="_blank">Download</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md mb-5">
-                    <div class="card text-center single-pricing-pack">
-                        <div class="pt-4">
-                            <h5>Lembar Kerja Peserta Didik</h5>
-                        </div>
-                        <div class="pricing-img mt-4">
-                            <img src="{{ asset('/img/basic.svg') }}" alt="pricing img" class="img-fluid">
-                        </div>
-                        <div class="card-header py-4 border-0 pricing-header">
-                            {{-- <div class="h1 text-center mb-0">$<span class="price font-weight-bolder">29</span>
-                            </div> --}}
-                        </div>
-                        <div class="card-body">
-
-                            <a href="https://drive.google.com/file/d/1UfdHY9-5JOZUIzKkT7SiQnAxL4gZusyT/view?usp=sharing"
-                                class="btn outline-btn mb-3" target="_blank">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md mb-5">
-                    <div class="card text-center single-pricing-pack">
-                        <div class="pt-4">
-                            <h5>Panduan Pelaksanaan Pembelajaran</h5>
-                        </div>
-                        <div class="pricing-img mt-4">
-                            <img src="{{ asset('/img/basic.svg') }}" alt="pricing img" class="img-fluid">
-                        </div>
-                        <div class="card-header py-4 border-0 pricing-header">
-                            {{-- <div class="h1 text-center mb-0">$<span class="price font-weight-bolder">29</span>
-                            </div> --}}
-                        </div>
-                        <div class="card-body">
-
-                            <a href="https://drive.google.com/file/d/1dhK6j3a6uDbOeWFnPlM24gvZw2BhXbVP/view?usp=sharing"
-                                class="btn outline-btn mb-3" target="_blank">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md mb-5">
-                    <div class="card text-center single-pricing-pack">
-                        <div class="pt-4">
-                            <h5>Panduan Untuk Guru</h5>
-                        </div>
-                        <div class="pricing-img mt-4">
-                            <img src="{{ asset('/img/basic.svg') }}" alt="pricing img" class="img-fluid">
-                        </div>
-                        <div class="card-header py-4 border-0 pricing-header">
-                            {{-- <div class="h1 text-center mb-0">$<span class="price font-weight-bolder">29</span>
-                            </div> --}}
-                        </div>
-                        <div class="card-body">
-
-                            <a href="#" class="btn outline-btn mb-3" target="_blank">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md mb-5">
-                    <div class="card text-center single-pricing-pack">
-                        <div class="pt-4">
-                            <h5>Panduan Untuk Siswa</h5>
-                        </div>
-                        <div class="pricing-img mt-4">
-                            <img src="{{ asset('/img/basic.svg') }}" alt="pricing img" class="img-fluid">
-                        </div>
-                        <div class="card-header py-4 border-0 pricing-header">
-                            {{-- <div class="h1 text-center mb-0">$<span class="price font-weight-bolder">29</span>
-                            </div> --}}
-                        </div>
-                        <div class="card-body">
-
-                            <a href="#" class="btn outline-btn mb-3" target="_blank">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md mb-5">
-                    <div class="card text-center single-pricing-pack">
-                        <div class="pt-4">
-                            <h5>Panduan Pembelajaran Kelas VR</h5>
-                        </div>
-                        <div class="pricing-img mt-4">
-                            <img src="{{ asset('/img/basic.svg') }}" alt="pricing img" class="img-fluid">
-                        </div>
-                        <div class="card-header py-4 border-0 pricing-header">
-                            {{-- <div class="h1 text-center mb-0">$<span class="price font-weight-bolder">29</span>
-                            </div> --}}
-                        </div>
-                        <div class="card-body">
-
-                            <a href="#" class="btn outline-btn mb-3" target="_blank">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md mb-5">
-                    <div class="card text-center single-pricing-pack">
-                        <div class="pt-4">
-                            <h5>Panduan Pembelajaran AR</h5>
-                        </div>
-                        <div class="pricing-img mt-4">
-                            <img src="{{ asset('/img/basic.svg') }}" alt="pricing img" class="img-fluid">
-                        </div>
-                        <div class="card-header py-4 border-0 pricing-header">
-                            {{-- <div class="h1 text-center mb-0">$<span class="price font-weight-bolder">29</span>
-                            </div> --}}
-                        </div>
-                        <div class="card-body">
-
-                            <a href="#" class="btn outline-btn mb-3" target="_blank">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-
+                @endforeach
             </div>
 
         </div>

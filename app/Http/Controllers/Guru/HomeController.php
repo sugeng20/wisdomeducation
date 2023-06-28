@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Guru;
 
 use App\Http\Controllers\Controller;
 use App\Models\Kelas;
+use App\Models\Unduhan;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,6 +17,7 @@ class HomeController extends Controller
 
     public function unduhan()
     {
-        return view('pages.guru.unduhan');
+        $data['unduhan'] = Unduhan::all();
+        return view('pages.guru.unduhan', compact('data'));
     }
 }
