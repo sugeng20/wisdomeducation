@@ -12,4 +12,9 @@ class Kreasi extends Model
     protected $table = 'kreasi';
 
     protected $guarded = [];
+
+    public function guru()
+    {
+        return $this->belongsTo(Guru::class, 'guru_id');
+    }
 }
