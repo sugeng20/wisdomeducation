@@ -14,9 +14,9 @@
 
     @stack('add-plugins-css')
     <!-- App css -->
-    <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('admin/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('admin/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('templateadmin/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('templateadmin/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('templateadmin/css/app.min.css') }}" rel="stylesheet" type="text/css" />
     @stack('add-css')
 
 </head>
@@ -35,7 +35,8 @@
         </div>
         <div class="sidebar-user-pro media border-end">
             <div class="position-relative mx-auto">
-                <img src="{{ asset('admin/images/users/user-3.jpg') }}" alt="user" class="rounded-circle thumb-md">
+                <img src="{{ asset('templateadmin/images/users/user-3.jpg') }}" alt="user"
+                    class="rounded-circle thumb-md">
                 <span class="online-icon position-absolute end-0"><i class="mdi mdi-record text-success"></i></span>
             </div>
             <div class="media-body ms-2 user-detail align-self-center">
@@ -137,7 +138,7 @@
                     <a class="nav-link dropdown-toggle nav-user" data-bs-toggle="dropdown" href="#" role="button"
                         aria-haspopup="false" aria-expanded="false">
                         <div class="d-flex align-items-center">
-                            <img src="{{ Auth::user()->foto ? asset('admin/images/users/' . Auth::user()->foto) : asset('admin/images/users/user-3.jpg') }}"
+                            <img src="{{ Auth::user()->foto ? asset('templateadmin/images/users/' . Auth::user()->foto) : asset('templateadmin/images/users/user-3.jpg') }}"
                                 alt="profile-user" class="rounded-circle me-2 thumb-sm" />
                             <div>
                                 <small class="d-none d-md-block font-11">{{ Auth::user()->role }}</small>
@@ -201,7 +202,7 @@
     <!-- Javascript  -->
     @stack('add-plugins-js')
     <!-- App js -->
-    <script src="{{ asset('admin/js/app.js') }}"></script>
+    <script src="{{ asset('templateadmin/js/app.js') }}"></script>
     @stack('add-js')
 
 </body>

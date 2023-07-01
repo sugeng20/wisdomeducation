@@ -98,11 +98,11 @@ Kelas
 @endsection
 
 @push('add-plugins-css')
-<link href="{{ asset('admin/plugins/datatables/datatable.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('templateadmin/plugins/datatables/datatable.css') }}" rel="stylesheet" type="text/css" />
 @endpush
 
 @push('add-plugins-js')
-<script src="{{ asset('admin/plugins/datatables/simple-datatables.js') }}"></script>
+<script src="{{ asset('templateadmin/plugins/datatables/simple-datatables.js') }}"></script>
 @endpush
 
 @push('add-js')
